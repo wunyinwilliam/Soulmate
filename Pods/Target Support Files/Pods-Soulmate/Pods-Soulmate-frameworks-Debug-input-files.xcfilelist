@@ -1,0 +1,17 @@
+${PODS_ROOT}/Target Support Files/Pods-Soulmate/Pods-Soulmate-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Applozic/Applozic.framework
+${BUILT_PRODUCTS_DIR}/ApplozicSwift/ApplozicSwift.framework
+${BUILT_PRODUCTS_DIR}/KDCalendar/KDCalendar.framework
+${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
+${BUILT_PRODUCTS_DIR}/Kommunicate/Kommunicate.framework
+${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework
+${BUILT_PRODUCTS_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework
+${BUILT_PRODUCTS_DIR}/MGSwipeTableCell/MGSwipeTableCell.framework
+${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework
+${BUILT_PRODUCTS_DIR}/MotionAnimator/MotionAnimator.framework
+${BUILT_PRODUCTS_DIR}/MotionInterchange/MotionInterchange.framework
+${BUILT_PRODUCTS_DIR}/Realm/Realm.framework
+${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
+${BUILT_PRODUCTS_DIR}/SwiftChart/SwiftChart.framework
+${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework

@@ -1,0 +1,6 @@
+framework module Pods_Soulmate_SoulmateUITests {
+  umbrella header "Pods-Soulmate-SoulmateUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,1305 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01AA73F78C9F19EFBEC1DB15 /* Pods_Soulmate_SoulmateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57AD2A3712EAA73DF03F0C19 /* Pods_Soulmate_SoulmateUITests.framework */; };
+		7911D7C425E3D1AA005CEB16 /* L2_SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7911D7C325E3D1AA005CEB16 /* L2_SignUpViewController.swift */; };
+		7911D7E125E3DF40005CEB16 /* H1_HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7911D7E025E3DF40005CEB16 /* H1_HomeViewController.swift */; };
+		7914D928260B1D6E00EF8852 /* A2_RelaxingTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7914D927260B1D6E00EF8852 /* A2_RelaxingTipsViewController.swift */; };
+		7914D92F260B1D7900EF8852 /* A3_GoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7914D92E260B1D7900EF8852 /* A3_GoalsViewController.swift */; };
+		7914D936260B1D8800EF8852 /* A4_ExpressionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7914D935260B1D8800EF8852 /* A4_ExpressionsViewController.swift */; };
+		7914D93D260B1D9A00EF8852 /* A5_ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7914D93C260B1D9A00EF8852 /* A5_ActivitiesViewController.swift */; };
+		7914D944260B1DA500EF8852 /* A6_ConsultationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7914D943260B1DA500EF8852 /* A6_ConsultationViewController.swift */; };
+		7914D94B260B1FC700EF8852 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7914D94A260B1FC700EF8852 /* Issue.swift */; };
+		7914D959260B745F00EF8852 /* A4b_ExpressionsDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7914D958260B745F00EF8852 /* A4b_ExpressionsDetailsTableViewController.swift */; };
+		7914D965260C8E7700EF8852 /* A4c_DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7914D964260C8E7700EF8852 /* A4c_DetailsViewController.swift */; };
+		7939FDD925E0990E007DC611 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7939FDD825E0990E007DC611 /* AppDelegate.swift */; };
+		7939FDDB25E0990E007DC611 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7939FDDA25E0990E007DC611 /* SceneDelegate.swift */; };
+		7939FDDD25E0990E007DC611 /* L1_LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7939FDDC25E0990E007DC611 /* L1_LoginPageViewController.swift */; };
+		7939FDE025E0990E007DC611 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7939FDDE25E0990E007DC611 /* Main.storyboard */; };
+		7939FDE225E09912007DC611 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7939FDE125E09912007DC611 /* Assets.xcassets */; };
+		7939FDE525E09912007DC611 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7939FDE325E09912007DC611 /* LaunchScreen.storyboard */; };
+		7939FDF025E09912007DC611 /* SoulmateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7939FDEF25E09912007DC611 /* SoulmateTests.swift */; };
+		7939FDFB25E09912007DC611 /* SoulmateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7939FDFA25E09912007DC611 /* SoulmateUITests.swift */; };
+		7939FE0025E09912007DC611 /* Soulmate WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 7939FDFF25E09912007DC611 /* Soulmate WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7939FE0625E09912007DC611 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7939FE0425E09912007DC611 /* Interface.storyboard */; };
+		7939FE0825E09913007DC611 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7939FE0725E09913007DC611 /* Assets.xcassets */; };
+		7939FE0F25E09913007DC611 /* Soulmate WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7939FE0E25E09913007DC611 /* Soulmate WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7939FE1425E09913007DC611 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7939FE1325E09913007DC611 /* InterfaceController.swift */; };
+		7939FE1625E09913007DC611 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7939FE1525E09913007DC611 /* ExtensionDelegate.swift */; };
+		7939FE1825E09913007DC611 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7939FE1725E09913007DC611 /* NotificationController.swift */; };
+		7939FE1A25E09913007DC611 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7939FE1925E09913007DC611 /* ComplicationController.swift */; };
+		7939FE1C25E09914007DC611 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7939FE1B25E09914007DC611 /* Assets.xcassets */; };
+		7944225425F9050000D65D46 /* S2_SettingsDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7944225325F9050000D65D46 /* S2_SettingsDetailsTableViewController.swift */; };
+		796D80F425E3A63A00161BE2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796D80F325E3A63A00161BE2 /* User.swift */; };
+		798D24EF26131201008ECBF8 /* A4d_ExpressionStructureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798D24EE26131201008ECBF8 /* A4d_ExpressionStructureViewController.swift */; };
+		7992DBE325F5364E00FD1502 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7992DBE225F5364E00FD1502 /* TabBarViewController.swift */; };
+		7992DBF625F6269C00FD1502 /* globalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7992DBF525F6269C00FD1502 /* globalVariables.swift */; };
+		7992DBFD25F6279B00FD1502 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7992DBFC25F6279B00FD1502 /* extensions.swift */; };
+		7992DC0425F6597F00FD1502 /* E3_SpecificHealthDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7992DC0325F6597F00FD1502 /* E3_SpecificHealthDataViewController.swift */; };
+		79AF92CF25F89D3E00133F69 /* globalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF92CE25F89D3E00133F69 /* globalFunctions.swift */; };
+		79B40E8B2619EC12009E3E32 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B40E8A2619EC12009E3E32 /* Login.swift */; };
+		79BC110F25F098A3004C1F19 /* S1_SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC110E25F098A3004C1F19 /* S1_SettingsTableViewController.swift */; };
+		79BC112025F32AEA004C1F19 /* UserHealthNormalRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC111F25F32AEA004C1F19 /* UserHealthNormalRange.swift */; };
+		79C96D3D25FCED39002CEA9A /* StressIndexRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C96D3C25FCED39002CEA9A /* StressIndexRecord.swift */; };
+		79E0976125EE31F400BA5746 /* E1_EmotionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E0976025EE31F400BA5746 /* E1_EmotionsViewController.swift */; };
+		79E0978525EE372D00BA5746 /* HealthKitSetupAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E0978425EE372D00BA5746 /* HealthKitSetupAssistant.swift */; };
+		79E0979125EE374700BA5746 /* UserHealthProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E0979025EE374700BA5746 /* UserHealthProfile.swift */; };
+		79E097A025EE3AF900BA5746 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E0979F25EE3AF900BA5746 /* HealthKit.framework */; };
+		79E097AC25EE3B9500BA5746 /* ProfileDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E097AB25EE3B9500BA5746 /* ProfileDataStore.swift */; };
+		79E097B825EE418D00BA5746 /* R1_RecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E097B725EE418D00BA5746 /* R1_RecordsViewController.swift */; };
+		79E097D025EE41C800BA5746 /* I1_InformationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E097CF25EE41C800BA5746 /* I1_InformationTableViewController.swift */; };
+		79E097D725EE41D600BA5746 /* A1_ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E097D625EE41D600BA5746 /* A1_ActivitiesViewController.swift */; };
+		79F345652601EDC000C01B73 /* R2_RecordsDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F345642601EDC000C01B73 /* R2_RecordsDetailTableViewController.swift */; };
+		79F6DFD225FB88A40030A3FD /* S3_SettingsMoreDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F6DFD125FB88A40030A3FD /* S3_SettingsMoreDetailsViewController.swift */; };
+		79F6DFDF25FCA1930030A3FD /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F6DFDE25FCA1930030A3FD /* HealthKit.framework */; };
+		79F81DE625F8BD67007F69DB /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F81DE525F8BD67007F69DB /* ProgressView.swift */; };
+		89FC4B97A56BBC4E9D31CA50 /* Pods_Soulmate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B3F3C7B0E332E6DD67E82C4 /* Pods_Soulmate.framework */; };
+		948969710BE42BDCC0A3E1D2 /* Pods_Soulmate_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A168AC25E443ED0D9469F4 /* Pods_Soulmate_WatchKit_App.framework */; };
+		CF02EDB36B68612BC7DBB3B3 /* Pods_SoulmateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34F55CFD221D0C28FFFE64B8 /* Pods_SoulmateTests.framework */; };
+		CF8BA7184AF5F10A325B736B /* Pods_Soulmate_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB95FE12B52CB005D498FD3 /* Pods_Soulmate_WatchKit_Extension.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7939FDEC25E09912007DC611 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7939FDCD25E0990E007DC611 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7939FDD425E0990E007DC611;
+			remoteInfo = Soulmate;
+		};
+		7939FDF725E09912007DC611 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7939FDCD25E0990E007DC611 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7939FDD425E0990E007DC611;
+			remoteInfo = Soulmate;
+		};
+		7939FE0125E09912007DC611 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7939FDCD25E0990E007DC611 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7939FDFE25E09912007DC611;
+			remoteInfo = "Soulmate WatchKit App";
+		};
+		7939FE1025E09913007DC611 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7939FDCD25E0990E007DC611 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7939FE0D25E09913007DC611;
+			remoteInfo = "Soulmate WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7939FE2425E09914007DC611 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7939FE0F25E09913007DC611 /* Soulmate WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7939FE2825E09914007DC611 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				7939FE0025E09912007DC611 /* Soulmate WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		090B1F5732519614A1FE7404 /* Pods-Soulmate WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soulmate WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-Soulmate WatchKit App/Pods-Soulmate WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		1BDF0B7A62B68E8081617E4F /* Pods-SoulmateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoulmateTests.release.xcconfig"; path = "Target Support Files/Pods-SoulmateTests/Pods-SoulmateTests.release.xcconfig"; sourceTree = "<group>"; };
+		212E67FA3919A748E517069A /* Pods-Soulmate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soulmate.debug.xcconfig"; path = "Target Support Files/Pods-Soulmate/Pods-Soulmate.debug.xcconfig"; sourceTree = "<group>"; };
+		34F55CFD221D0C28FFFE64B8 /* Pods_SoulmateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoulmateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B3F3C7B0E332E6DD67E82C4 /* Pods_Soulmate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Soulmate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57AD2A3712EAA73DF03F0C19 /* Pods_Soulmate_SoulmateUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Soulmate_SoulmateUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		671977D93149BB6D8F4DAE55 /* Pods-Soulmate-SoulmateUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soulmate-SoulmateUITests.release.xcconfig"; path = "Target Support Files/Pods-Soulmate-SoulmateUITests/Pods-Soulmate-SoulmateUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7911D7C325E3D1AA005CEB16 /* L2_SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L2_SignUpViewController.swift; sourceTree = "<group>"; };
+		7911D7E025E3DF40005CEB16 /* H1_HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H1_HomeViewController.swift; sourceTree = "<group>"; };
+		7914D927260B1D6E00EF8852 /* A2_RelaxingTipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A2_RelaxingTipsViewController.swift; sourceTree = "<group>"; };
+		7914D92E260B1D7900EF8852 /* A3_GoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A3_GoalsViewController.swift; sourceTree = "<group>"; };
+		7914D935260B1D8800EF8852 /* A4_ExpressionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A4_ExpressionsViewController.swift; sourceTree = "<group>"; };
+		7914D93C260B1D9A00EF8852 /* A5_ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A5_ActivitiesViewController.swift; sourceTree = "<group>"; };
+		7914D943260B1DA500EF8852 /* A6_ConsultationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A6_ConsultationViewController.swift; sourceTree = "<group>"; };
+		7914D94A260B1FC700EF8852 /* Issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
+		7914D958260B745F00EF8852 /* A4b_ExpressionsDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A4b_ExpressionsDetailsTableViewController.swift; sourceTree = "<group>"; };
+		7914D964260C8E7700EF8852 /* A4c_DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A4c_DetailsViewController.swift; sourceTree = "<group>"; };
+		7939FDD525E0990E007DC611 /* Soulmate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soulmate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7939FDD825E0990E007DC611 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7939FDDA25E0990E007DC611 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7939FDDC25E0990E007DC611 /* L1_LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L1_LoginPageViewController.swift; sourceTree = "<group>"; };
+		7939FDDF25E0990E007DC611 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7939FDE125E09912007DC611 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7939FDE425E09912007DC611 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7939FDEB25E09912007DC611 /* SoulmateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoulmateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7939FDEF25E09912007DC611 /* SoulmateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoulmateTests.swift; sourceTree = "<group>"; };
+		7939FDF125E09912007DC611 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7939FDF625E09912007DC611 /* SoulmateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoulmateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7939FDFA25E09912007DC611 /* SoulmateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoulmateUITests.swift; sourceTree = "<group>"; };
+		7939FDFC25E09912007DC611 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7939FDFF25E09912007DC611 /* Soulmate WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Soulmate WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7939FE0525E09912007DC611 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		7939FE0725E09913007DC611 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7939FE0925E09913007DC611 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7939FE0E25E09913007DC611 /* Soulmate WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Soulmate WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7939FE1325E09913007DC611 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		7939FE1525E09913007DC611 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		7939FE1725E09913007DC611 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		7939FE1925E09913007DC611 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		7939FE1B25E09914007DC611 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7939FE1D25E09914007DC611 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7939FE1E25E09914007DC611 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		7944225325F9050000D65D46 /* S2_SettingsDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S2_SettingsDetailsTableViewController.swift; sourceTree = "<group>"; };
+		796D80F325E3A63A00161BE2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		798D24EE26131201008ECBF8 /* A4d_ExpressionStructureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A4d_ExpressionStructureViewController.swift; sourceTree = "<group>"; };
+		7992DBE225F5364E00FD1502 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = "/Users/wunyinwilliam/Desktop/HKU/Year 4/ELEC4848FY/Phase 4 - Implementation/Soulmate/Soulmate/View Controllers/TabBarViewController.swift"; sourceTree = "<absolute>"; };
+		7992DBF525F6269C00FD1502 /* globalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = globalVariables.swift; sourceTree = "<group>"; };
+		7992DBFC25F6279B00FD1502 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		7992DC0325F6597F00FD1502 /* E3_SpecificHealthDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E3_SpecificHealthDataViewController.swift; sourceTree = "<group>"; };
+		79AF92CE25F89D3E00133F69 /* globalFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = globalFunctions.swift; path = "/Users/wunyinwilliam/Desktop/HKU/Year 4/ELEC4848FY/Phase 4 - Implementation/Soulmate/Soulmate/Model/globalFunctions.swift"; sourceTree = "<absolute>"; };
+		79B40E8A2619EC12009E3E32 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		79BC110E25F098A3004C1F19 /* S1_SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = S1_SettingsTableViewController.swift; path = "Soulmate/View Controllers/S1_SettingsTableViewController.swift"; sourceTree = SOURCE_ROOT; };
+		79BC111F25F32AEA004C1F19 /* UserHealthNormalRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHealthNormalRange.swift; sourceTree = "<group>"; };
+		79C96D3C25FCED39002CEA9A /* StressIndexRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StressIndexRecord.swift; sourceTree = "<group>"; };
+		79E0976025EE31F400BA5746 /* E1_EmotionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E1_EmotionsViewController.swift; sourceTree = "<group>"; };
+		79E0978425EE372D00BA5746 /* HealthKitSetupAssistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitSetupAssistant.swift; sourceTree = "<group>"; };
+		79E0979025EE374700BA5746 /* UserHealthProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHealthProfile.swift; sourceTree = "<group>"; };
+		79E0979E25EE3AF900BA5746 /* Soulmate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Soulmate.entitlements; sourceTree = "<group>"; };
+		79E0979F25EE3AF900BA5746 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		79E097AB25EE3B9500BA5746 /* ProfileDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataStore.swift; sourceTree = "<group>"; };
+		79E097B725EE418D00BA5746 /* R1_RecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R1_RecordsViewController.swift; sourceTree = "<group>"; };
+		79E097CF25EE41C800BA5746 /* I1_InformationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = I1_InformationTableViewController.swift; sourceTree = "<group>"; };
+		79E097D625EE41D600BA5746 /* A1_ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A1_ActivitiesViewController.swift; sourceTree = "<group>"; };
+		79F345642601EDC000C01B73 /* R2_RecordsDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R2_RecordsDetailTableViewController.swift; sourceTree = "<group>"; };
+		79F6DFD125FB88A40030A3FD /* S3_SettingsMoreDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S3_SettingsMoreDetailsViewController.swift; sourceTree = "<group>"; };
+		79F6DFDD25FCA1930030A3FD /* Soulmate WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Soulmate WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		79F6DFDE25FCA1930030A3FD /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		79F81DE525F8BD67007F69DB /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		83D54E81355BD18D8F49ECEE /* Pods-Soulmate-SoulmateUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soulmate-SoulmateUITests.debug.xcconfig"; path = "Target Support Files/Pods-Soulmate-SoulmateUITests/Pods-Soulmate-SoulmateUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B5F77D881F4472F1BAAD5FA3 /* Pods-Soulmate WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soulmate WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-Soulmate WatchKit Extension/Pods-Soulmate WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		BD17298396D4EC1593371462 /* Pods-SoulmateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoulmateTests.debug.xcconfig"; path = "Target Support Files/Pods-SoulmateTests/Pods-SoulmateTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BFB95FE12B52CB005D498FD3 /* Pods_Soulmate_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Soulmate_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C572442D281EE5354CB8CA4C /* Pods-Soulmate WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soulmate WatchKit Extension.release.xcconfig"; path = "Target Support Files/Pods-Soulmate WatchKit Extension/Pods-Soulmate WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		D4AD270BC01D7D1ABA293E17 /* Pods-Soulmate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soulmate.release.xcconfig"; path = "Target Support Files/Pods-Soulmate/Pods-Soulmate.release.xcconfig"; sourceTree = "<group>"; };
+		E2A168AC25E443ED0D9469F4 /* Pods_Soulmate_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Soulmate_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA80E885825E9505A7674128 /* Pods-Soulmate WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soulmate WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-Soulmate WatchKit App/Pods-Soulmate WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7939FDD225E0990E007DC611 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89FC4B97A56BBC4E9D31CA50 /* Pods_Soulmate.framework in Frameworks */,
+				79E097A025EE3AF900BA5746 /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7939FDE825E09912007DC611 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF02EDB36B68612BC7DBB3B3 /* Pods_SoulmateTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7939FDF325E09912007DC611 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01AA73F78C9F19EFBEC1DB15 /* Pods_Soulmate_SoulmateUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7939FE0B25E09913007DC611 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF8BA7184AF5F10A325B736B /* Pods_Soulmate_WatchKit_Extension.framework in Frameworks */,
+				79F6DFDF25FCA1930030A3FD /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8D2E6F8212DEB5A245EAB16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				948969710BE42BDCC0A3E1D2 /* Pods_Soulmate_WatchKit_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		167D672407297E6C61273C4C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79F6DFDE25FCA1930030A3FD /* HealthKit.framework */,
+				79E0979F25EE3AF900BA5746 /* HealthKit.framework */,
+				4B3F3C7B0E332E6DD67E82C4 /* Pods_Soulmate.framework */,
+				E2A168AC25E443ED0D9469F4 /* Pods_Soulmate_WatchKit_App.framework */,
+				BFB95FE12B52CB005D498FD3 /* Pods_Soulmate_WatchKit_Extension.framework */,
+				57AD2A3712EAA73DF03F0C19 /* Pods_Soulmate_SoulmateUITests.framework */,
+				34F55CFD221D0C28FFFE64B8 /* Pods_SoulmateTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7939FDCC25E0990E007DC611 = {
+			isa = PBXGroup;
+			children = (
+				7939FDD725E0990E007DC611 /* Soulmate */,
+				7939FDEE25E09912007DC611 /* SoulmateTests */,
+				7939FDF925E09912007DC611 /* SoulmateUITests */,
+				7939FE0325E09912007DC611 /* Soulmate WatchKit App */,
+				7939FE1225E09913007DC611 /* Soulmate WatchKit Extension */,
+				7939FDD625E0990E007DC611 /* Products */,
+				B26EC49AFAB67DF425D360BF /* Pods */,
+				167D672407297E6C61273C4C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7939FDD625E0990E007DC611 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7939FDD525E0990E007DC611 /* Soulmate.app */,
+				7939FDEB25E09912007DC611 /* SoulmateTests.xctest */,
+				7939FDF625E09912007DC611 /* SoulmateUITests.xctest */,
+				7939FDFF25E09912007DC611 /* Soulmate WatchKit App.app */,
+				7939FE0E25E09913007DC611 /* Soulmate WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7939FDD725E0990E007DC611 /* Soulmate */ = {
+			isa = PBXGroup;
+			children = (
+				79E0979E25EE3AF900BA5746 /* Soulmate.entitlements */,
+				7939FDD825E0990E007DC611 /* AppDelegate.swift */,
+				7939FDDA25E0990E007DC611 /* SceneDelegate.swift */,
+				7992DBF525F6269C00FD1502 /* globalVariables.swift */,
+				79AF92CE25F89D3E00133F69 /* globalFunctions.swift */,
+				796D80F025E3A5BF00161BE2 /* View Controllers */,
+				796D80EF25E3A59D00161BE2 /* Model */,
+				796D80F125E3A5E400161BE2 /* Resources */,
+				79E0978325EE371500BA5746 /* Supporting Files */,
+				79BC10EE25EF9ACF004C1F19 /* Extensions */,
+			);
+			path = Soulmate;
+			sourceTree = "<group>";
+		};
+		7939FDEE25E09912007DC611 /* SoulmateTests */ = {
+			isa = PBXGroup;
+			children = (
+				7939FDEF25E09912007DC611 /* SoulmateTests.swift */,
+				7939FDF125E09912007DC611 /* Info.plist */,
+			);
+			path = SoulmateTests;
+			sourceTree = "<group>";
+		};
+		7939FDF925E09912007DC611 /* SoulmateUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7939FDFA25E09912007DC611 /* SoulmateUITests.swift */,
+				7939FDFC25E09912007DC611 /* Info.plist */,
+			);
+			path = SoulmateUITests;
+			sourceTree = "<group>";
+		};
+		7939FE0325E09912007DC611 /* Soulmate WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				7939FE0425E09912007DC611 /* Interface.storyboard */,
+				7939FE0725E09913007DC611 /* Assets.xcassets */,
+				7939FE0925E09913007DC611 /* Info.plist */,
+			);
+			path = "Soulmate WatchKit App";
+			sourceTree = "<group>";
+		};
+		7939FE1225E09913007DC611 /* Soulmate WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				79F6DFDD25FCA1930030A3FD /* Soulmate WatchKit Extension.entitlements */,
+				7939FE1325E09913007DC611 /* InterfaceController.swift */,
+				7939FE1525E09913007DC611 /* ExtensionDelegate.swift */,
+				7939FE1725E09913007DC611 /* NotificationController.swift */,
+				7939FE1925E09913007DC611 /* ComplicationController.swift */,
+				7939FE1B25E09914007DC611 /* Assets.xcassets */,
+				7939FE1D25E09914007DC611 /* Info.plist */,
+				7939FE1E25E09914007DC611 /* PushNotificationPayload.apns */,
+			);
+			path = "Soulmate WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		796D80EF25E3A59D00161BE2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				79B40E8A2619EC12009E3E32 /* Login.swift */,
+				796D80F325E3A63A00161BE2 /* User.swift */,
+				79BC111F25F32AEA004C1F19 /* UserHealthNormalRange.swift */,
+				79E0979025EE374700BA5746 /* UserHealthProfile.swift */,
+				79C96D3C25FCED39002CEA9A /* StressIndexRecord.swift */,
+				7914D94A260B1FC700EF8852 /* Issue.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		796D80F025E3A5BF00161BE2 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7992DBE225F5364E00FD1502 /* TabBarViewController.swift */,
+				7939FDDC25E0990E007DC611 /* L1_LoginPageViewController.swift */,
+				7911D7C325E3D1AA005CEB16 /* L2_SignUpViewController.swift */,
+				7911D7E025E3DF40005CEB16 /* H1_HomeViewController.swift */,
+				79E0976025EE31F400BA5746 /* E1_EmotionsViewController.swift */,
+				7992DC0325F6597F00FD1502 /* E3_SpecificHealthDataViewController.swift */,
+				79E097D625EE41D600BA5746 /* A1_ActivitiesViewController.swift */,
+				7914D927260B1D6E00EF8852 /* A2_RelaxingTipsViewController.swift */,
+				7914D92E260B1D7900EF8852 /* A3_GoalsViewController.swift */,
+				7914D935260B1D8800EF8852 /* A4_ExpressionsViewController.swift */,
+				7914D958260B745F00EF8852 /* A4b_ExpressionsDetailsTableViewController.swift */,
+				7914D964260C8E7700EF8852 /* A4c_DetailsViewController.swift */,
+				798D24EE26131201008ECBF8 /* A4d_ExpressionStructureViewController.swift */,
+				7914D93C260B1D9A00EF8852 /* A5_ActivitiesViewController.swift */,
+				7914D943260B1DA500EF8852 /* A6_ConsultationViewController.swift */,
+				79E097CF25EE41C800BA5746 /* I1_InformationTableViewController.swift */,
+				79E097B725EE418D00BA5746 /* R1_RecordsViewController.swift */,
+				79F345642601EDC000C01B73 /* R2_RecordsDetailTableViewController.swift */,
+				79BC110E25F098A3004C1F19 /* S1_SettingsTableViewController.swift */,
+				7944225325F9050000D65D46 /* S2_SettingsDetailsTableViewController.swift */,
+				79F6DFD125FB88A40030A3FD /* S3_SettingsMoreDetailsViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		796D80F125E3A5E400161BE2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7939FDE125E09912007DC611 /* Assets.xcassets */,
+				7939FDE325E09912007DC611 /* LaunchScreen.storyboard */,
+				7939FDDE25E0990E007DC611 /* Main.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		79BC10EE25EF9ACF004C1F19 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7992DBFC25F6279B00FD1502 /* extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		79E0978325EE371500BA5746 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				79E0978425EE372D00BA5746 /* HealthKitSetupAssistant.swift */,
+				79E097AB25EE3B9500BA5746 /* ProfileDataStore.swift */,
+				79F81DE525F8BD67007F69DB /* ProgressView.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B26EC49AFAB67DF425D360BF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				212E67FA3919A748E517069A /* Pods-Soulmate.debug.xcconfig */,
+				D4AD270BC01D7D1ABA293E17 /* Pods-Soulmate.release.xcconfig */,
+				FA80E885825E9505A7674128 /* Pods-Soulmate WatchKit App.debug.xcconfig */,
+				090B1F5732519614A1FE7404 /* Pods-Soulmate WatchKit App.release.xcconfig */,
+				B5F77D881F4472F1BAAD5FA3 /* Pods-Soulmate WatchKit Extension.debug.xcconfig */,
+				C572442D281EE5354CB8CA4C /* Pods-Soulmate WatchKit Extension.release.xcconfig */,
+				83D54E81355BD18D8F49ECEE /* Pods-Soulmate-SoulmateUITests.debug.xcconfig */,
+				671977D93149BB6D8F4DAE55 /* Pods-Soulmate-SoulmateUITests.release.xcconfig */,
+				BD17298396D4EC1593371462 /* Pods-SoulmateTests.debug.xcconfig */,
+				1BDF0B7A62B68E8081617E4F /* Pods-SoulmateTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7939FDD425E0990E007DC611 /* Soulmate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7939FE2925E09914007DC611 /* Build configuration list for PBXNativeTarget "Soulmate" */;
+			buildPhases = (
+				CD36FDC4C1EFD0003756B636 /* [CP] Check Pods Manifest.lock */,
+				7939FDD125E0990E007DC611 /* Sources */,
+				7939FDD225E0990E007DC611 /* Frameworks */,
+				7939FDD325E0990E007DC611 /* Resources */,
+				7939FE2825E09914007DC611 /* Embed Watch Content */,
+				FB62F135155AD9D6E95C11B3 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7939FE0225E09912007DC611 /* PBXTargetDependency */,
+			);
+			name = Soulmate;
+			productName = Soulmate;
+			productReference = 7939FDD525E0990E007DC611 /* Soulmate.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7939FDEA25E09912007DC611 /* SoulmateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7939FE2C25E09914007DC611 /* Build configuration list for PBXNativeTarget "SoulmateTests" */;
+			buildPhases = (
+				B9262B1539128B7E6609857A /* [CP] Check Pods Manifest.lock */,
+				7939FDE725E09912007DC611 /* Sources */,
+				7939FDE825E09912007DC611 /* Frameworks */,
+				7939FDE925E09912007DC611 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7939FDED25E09912007DC611 /* PBXTargetDependency */,
+			);
+			name = SoulmateTests;
+			productName = SoulmateTests;
+			productReference = 7939FDEB25E09912007DC611 /* SoulmateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7939FDF525E09912007DC611 /* SoulmateUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7939FE2F25E09914007DC611 /* Build configuration list for PBXNativeTarget "SoulmateUITests" */;
+			buildPhases = (
+				822C9315FC5D7F8F052B72BC /* [CP] Check Pods Manifest.lock */,
+				7939FDF225E09912007DC611 /* Sources */,
+				7939FDF325E09912007DC611 /* Frameworks */,
+				7939FDF425E09912007DC611 /* Resources */,
+				86192D9AD6FF7801C0AA0206 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7939FDF825E09912007DC611 /* PBXTargetDependency */,
+			);
+			name = SoulmateUITests;
+			productName = SoulmateUITests;
+			productReference = 7939FDF625E09912007DC611 /* SoulmateUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		7939FDFE25E09912007DC611 /* Soulmate WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7939FE2525E09914007DC611 /* Build configuration list for PBXNativeTarget "Soulmate WatchKit App" */;
+			buildPhases = (
+				217F18D9B6ABC0852108EC3D /* [CP] Check Pods Manifest.lock */,
+				7939FDFD25E09912007DC611 /* Resources */,
+				7939FE2425E09914007DC611 /* Embed App Extensions */,
+				D8D2E6F8212DEB5A245EAB16 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7939FE1125E09913007DC611 /* PBXTargetDependency */,
+			);
+			name = "Soulmate WatchKit App";
+			productName = "Soulmate WatchKit App";
+			productReference = 7939FDFF25E09912007DC611 /* Soulmate WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		7939FE0D25E09913007DC611 /* Soulmate WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7939FE2125E09914007DC611 /* Build configuration list for PBXNativeTarget "Soulmate WatchKit Extension" */;
+			buildPhases = (
+				C4886D065D1A0FEB9D8DC533 /* [CP] Check Pods Manifest.lock */,
+				7939FE0A25E09913007DC611 /* Sources */,
+				7939FE0B25E09913007DC611 /* Frameworks */,
+				7939FE0C25E09913007DC611 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Soulmate WatchKit Extension";
+			productName = "Soulmate WatchKit Extension";
+			productReference = 7939FE0E25E09913007DC611 /* Soulmate WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7939FDCD25E0990E007DC611 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					7939FDD425E0990E007DC611 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					7939FDEA25E09912007DC611 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 7939FDD425E0990E007DC611;
+					};
+					7939FDF525E09912007DC611 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 7939FDD425E0990E007DC611;
+					};
+					7939FDFE25E09912007DC611 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					7939FE0D25E09913007DC611 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 7939FDD025E0990E007DC611 /* Build configuration list for PBXProject "Soulmate" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7939FDCC25E0990E007DC611;
+			productRefGroup = 7939FDD625E0990E007DC611 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7939FDD425E0990E007DC611 /* Soulmate */,
+				7939FDEA25E09912007DC611 /* SoulmateTests */,
+				7939FDF525E09912007DC611 /* SoulmateUITests */,
+				7939FDFE25E09912007DC611 /* Soulmate WatchKit App */,
+				7939FE0D25E09913007DC611 /* Soulmate WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7939FDD325E0990E007DC611 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7939FDE525E09912007DC611 /* LaunchScreen.storyboard in Resources */,
+				7939FDE225E09912007DC611 /* Assets.xcassets in Resources */,
+				7939FDE025E0990E007DC611 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7939FDE925E09912007DC611 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7939FDF425E09912007DC611 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7939FDFD25E09912007DC611 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7939FE0825E09913007DC611 /* Assets.xcassets in Resources */,
+				7939FE0625E09912007DC611 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7939FE0C25E09913007DC611 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7939FE1C25E09914007DC611 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		217F18D9B6ABC0852108EC3D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Soulmate WatchKit App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		822C9315FC5D7F8F052B72BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Soulmate-SoulmateUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86192D9AD6FF7801C0AA0206 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Soulmate-SoulmateUITests/Pods-Soulmate-SoulmateUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Soulmate-SoulmateUITests/Pods-Soulmate-SoulmateUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Soulmate-SoulmateUITests/Pods-Soulmate-SoulmateUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9262B1539128B7E6609857A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SoulmateTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4886D065D1A0FEB9D8DC533 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Soulmate WatchKit Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD36FDC4C1EFD0003756B636 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Soulmate-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB62F135155AD9D6E95C11B3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Soulmate/Pods-Soulmate-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Soulmate/Pods-Soulmate-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Soulmate/Pods-Soulmate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7939FDD125E0990E007DC611 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7911D7C425E3D1AA005CEB16 /* L2_SignUpViewController.swift in Sources */,
+				7914D94B260B1FC700EF8852 /* Issue.swift in Sources */,
+				79E097AC25EE3B9500BA5746 /* ProfileDataStore.swift in Sources */,
+				7914D965260C8E7700EF8852 /* A4c_DetailsViewController.swift in Sources */,
+				79BC110F25F098A3004C1F19 /* S1_SettingsTableViewController.swift in Sources */,
+				79E097D725EE41D600BA5746 /* A1_ActivitiesViewController.swift in Sources */,
+				79E0978525EE372D00BA5746 /* HealthKitSetupAssistant.swift in Sources */,
+				7992DBE325F5364E00FD1502 /* TabBarViewController.swift in Sources */,
+				79E0979125EE374700BA5746 /* UserHealthProfile.swift in Sources */,
+				79F345652601EDC000C01B73 /* R2_RecordsDetailTableViewController.swift in Sources */,
+				796D80F425E3A63A00161BE2 /* User.swift in Sources */,
+				7911D7E125E3DF40005CEB16 /* H1_HomeViewController.swift in Sources */,
+				798D24EF26131201008ECBF8 /* A4d_ExpressionStructureViewController.swift in Sources */,
+				7992DC0425F6597F00FD1502 /* E3_SpecificHealthDataViewController.swift in Sources */,
+				7944225425F9050000D65D46 /* S2_SettingsDetailsTableViewController.swift in Sources */,
+				7914D959260B745F00EF8852 /* A4b_ExpressionsDetailsTableViewController.swift in Sources */,
+				79E097B825EE418D00BA5746 /* R1_RecordsViewController.swift in Sources */,
+				7939FDDD25E0990E007DC611 /* L1_LoginPageViewController.swift in Sources */,
+				79C96D3D25FCED39002CEA9A /* StressIndexRecord.swift in Sources */,
+				7914D93D260B1D9A00EF8852 /* A5_ActivitiesViewController.swift in Sources */,
+				7914D92F260B1D7900EF8852 /* A3_GoalsViewController.swift in Sources */,
+				79B40E8B2619EC12009E3E32 /* Login.swift in Sources */,
+				7914D928260B1D6E00EF8852 /* A2_RelaxingTipsViewController.swift in Sources */,
+				79E097D025EE41C800BA5746 /* I1_InformationTableViewController.swift in Sources */,
+				79BC112025F32AEA004C1F19 /* UserHealthNormalRange.swift in Sources */,
+				79F81DE625F8BD67007F69DB /* ProgressView.swift in Sources */,
+				7992DBFD25F6279B00FD1502 /* extensions.swift in Sources */,
+				79E0976125EE31F400BA5746 /* E1_EmotionsViewController.swift in Sources */,
+				79F6DFD225FB88A40030A3FD /* S3_SettingsMoreDetailsViewController.swift in Sources */,
+				7914D944260B1DA500EF8852 /* A6_ConsultationViewController.swift in Sources */,
+				7914D936260B1D8800EF8852 /* A4_ExpressionsViewController.swift in Sources */,
+				79AF92CF25F89D3E00133F69 /* globalFunctions.swift in Sources */,
+				7939FDD925E0990E007DC611 /* AppDelegate.swift in Sources */,
+				7939FDDB25E0990E007DC611 /* SceneDelegate.swift in Sources */,
+				7992DBF625F6269C00FD1502 /* globalVariables.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7939FDE725E09912007DC611 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7939FDF025E09912007DC611 /* SoulmateTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7939FDF225E09912007DC611 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7939FDFB25E09912007DC611 /* SoulmateUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7939FE0A25E09913007DC611 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7939FE1825E09913007DC611 /* NotificationController.swift in Sources */,
+				7939FE1A25E09913007DC611 /* ComplicationController.swift in Sources */,
+				7939FE1625E09913007DC611 /* ExtensionDelegate.swift in Sources */,
+				7939FE1425E09913007DC611 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7939FDED25E09912007DC611 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7939FDD425E0990E007DC611 /* Soulmate */;
+			targetProxy = 7939FDEC25E09912007DC611 /* PBXContainerItemProxy */;
+		};
+		7939FDF825E09912007DC611 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7939FDD425E0990E007DC611 /* Soulmate */;
+			targetProxy = 7939FDF725E09912007DC611 /* PBXContainerItemProxy */;
+		};
+		7939FE0225E09912007DC611 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7939FDFE25E09912007DC611 /* Soulmate WatchKit App */;
+			targetProxy = 7939FE0125E09912007DC611 /* PBXContainerItemProxy */;
+		};
+		7939FE1125E09913007DC611 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7939FE0D25E09913007DC611 /* Soulmate WatchKit Extension */;
+			targetProxy = 7939FE1025E09913007DC611 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7939FDDE25E0990E007DC611 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7939FDDF25E0990E007DC611 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7939FDE325E09912007DC611 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7939FDE425E09912007DC611 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7939FE0425E09912007DC611 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7939FE0525E09912007DC611 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7939FE1F25E09914007DC611 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7939FE2025E09914007DC611 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		7939FE2225E09914007DC611 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5F77D881F4472F1BAAD5FA3 /* Pods-Soulmate WatchKit Extension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Soulmate WatchKit Extension/Soulmate WatchKit Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T3N6692BLL;
+				INFOPLIST_FILE = "Soulmate WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = willlam.Soulmate.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		7939FE2325E09914007DC611 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C572442D281EE5354CB8CA4C /* Pods-Soulmate WatchKit Extension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Soulmate WatchKit Extension/Soulmate WatchKit Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T3N6692BLL;
+				INFOPLIST_FILE = "Soulmate WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = willlam.Soulmate.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
+		7939FE2625E09914007DC611 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA80E885825E9505A7674128 /* Pods-Soulmate WatchKit App.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T3N6692BLL;
+				IBSC_MODULE = Soulmate_WatchKit_Extension;
+				INFOPLIST_FILE = "Soulmate WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = willlam.Soulmate.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		7939FE2725E09914007DC611 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 090B1F5732519614A1FE7404 /* Pods-Soulmate WatchKit App.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T3N6692BLL;
+				IBSC_MODULE = Soulmate_WatchKit_Extension;
+				INFOPLIST_FILE = "Soulmate WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = willlam.Soulmate.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
+		7939FE2A25E09914007DC611 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 212E67FA3919A748E517069A /* Pods-Soulmate.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Soulmate/Soulmate.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T3N6692BLL;
+				INFOPLIST_FILE = Soulmate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = willlam.Soulmate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		7939FE2B25E09914007DC611 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4AD270BC01D7D1ABA293E17 /* Pods-Soulmate.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Soulmate/Soulmate.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T3N6692BLL;
+				INFOPLIST_FILE = Soulmate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = willlam.Soulmate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7939FE2D25E09914007DC611 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD17298396D4EC1593371462 /* Pods-SoulmateTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T3N6692BLL;
+				INFOPLIST_FILE = SoulmateTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = willlam.SoulmateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Soulmate.app/Soulmate";
+			};
+			name = Debug;
+		};
+		7939FE2E25E09914007DC611 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BDF0B7A62B68E8081617E4F /* Pods-SoulmateTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T3N6692BLL;
+				INFOPLIST_FILE = SoulmateTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = willlam.SoulmateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Soulmate.app/Soulmate";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7939FE3025E09914007DC611 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83D54E81355BD18D8F49ECEE /* Pods-Soulmate-SoulmateUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T3N6692BLL;
+				INFOPLIST_FILE = SoulmateUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = willlam.SoulmateUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Soulmate;
+			};
+			name = Debug;
+		};
+		7939FE3125E09914007DC611 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 671977D93149BB6D8F4DAE55 /* Pods-Soulmate-SoulmateUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T3N6692BLL;
+				INFOPLIST_FILE = SoulmateUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = willlam.SoulmateUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Soulmate;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7939FDD025E0990E007DC611 /* Build configuration list for PBXProject "Soulmate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7939FE1F25E09914007DC611 /* Debug */,
+				7939FE2025E09914007DC611 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7939FE2125E09914007DC611 /* Build configuration list for PBXNativeTarget "Soulmate WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7939FE2225E09914007DC611 /* Debug */,
+				7939FE2325E09914007DC611 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7939FE2525E09914007DC611 /* Build configuration list for PBXNativeTarget "Soulmate WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7939FE2625E09914007DC611 /* Debug */,
+				7939FE2725E09914007DC611 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7939FE2925E09914007DC611 /* Build configuration list for PBXNativeTarget "Soulmate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7939FE2A25E09914007DC611 /* Debug */,
+				7939FE2B25E09914007DC611 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7939FE2C25E09914007DC611 /* Build configuration list for PBXNativeTarget "SoulmateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7939FE2D25E09914007DC611 /* Debug */,
+				7939FE2E25E09914007DC611 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7939FE2F25E09914007DC611 /* Build configuration list for PBXNativeTarget "SoulmateUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7939FE3025E09914007DC611 /* Debug */,
+				7939FE3125E09914007DC611 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7939FDCD25E0990E007DC611 /* Project object */;
+}
