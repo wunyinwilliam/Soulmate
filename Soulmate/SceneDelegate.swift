@@ -20,10 +20,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         if self.isLogin() {
             window?.rootViewController = vc1
+            self.setUpCurrentUser()
         } else {
             window?.rootViewController = vc2
         }
         window?.makeKeyAndVisible()
+    }
+    
+    private func setUpCurrentUser() {
+        let user = try! Realm().objects(User.self)
+        if let firstUser = user.first {
+            currentuser = firstUser
+        } else {
+            print("ERROR: There is no current user")
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -12,6 +12,13 @@ class A5_ActivitiesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let center = UNUserNotificationCenter.current()
+        print(" ******* PENDING NOTIFICATIONS *******")
+        center.getPendingNotificationRequests(completionHandler: { requests in
+            for request in requests {
+                print(request)
+            }
+        })
         // Do any additional setup after loading the view.
     }
     

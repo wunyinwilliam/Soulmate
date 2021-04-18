@@ -12,10 +12,11 @@ let defaultNoOfDays: Int = 100
 
 var currentuser = User()
 var userHealthProfile = UserHealthProfile()
+
 var positiveNeutralNegativeList = ["positive", "neutral", "negative"]
-var emotionsList = ["happy", "sad", "angry", "worry", "upbeat", "mad", "fear", "calm", "satisfied", "confident", "miserable", "nervous", "joyful"]
-var reasonsList = ["health", "family", "work", "home", "friendship", "spirituality", "personal growth", "society", "finance"]
-var helpsList = ["make a specific offer to help", "speak sincere words of encouragement", "bring me a meal", "send an encouraging message", "listen to me", "find me", "pray with me", "express love and gratitude"]
+var emotionsList = ["happy", "sad", "angry", "worried", "calm", "satisfied", "confident", "bored", "stressful"]
+var reasonsList = ["health", "family", "work", "friendship", "relationship", "personal growth", "society", "finance"]
+var helpsList = ["do acts of service", "say encouraging words", "send me a gift", "listen to my feelings", "spend time with me", "pray with me", "express love & gratitude", "frequently find me"]
 
 var currentIssue = Issue(positive_negative: positiveNeutralNegativeList.randomElement()!, emotions: [emotionsList.randomElement()!], stressLevel: 7, reasons: [reasonsList.randomElement()!], details: "my final year project deadline is near", helps: [helpsList.randomElement()!])
 
@@ -78,7 +79,7 @@ var quotesList = [
     --- Lewis Carroll
     """,
     """
-    “And, when you want something, all the universe conspires in helping you to achieve it.”
+    “When you want something, all the universe conspires in helping you to achieve it.”
     --- Paulo Coelho, <The Alchemist>
     """,
     """

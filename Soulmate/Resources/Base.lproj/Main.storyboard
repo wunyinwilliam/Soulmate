@@ -747,7 +747,7 @@
                                     <constraint firstItem="xCo-pL-lO3" firstAttribute="leading" secondItem="6Du-ho-xOg" secondAttribute="leading" constant="15" id="qdf-vl-umx"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Party" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="squ-P1-PuX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meditation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="squ-P1-PuX">
                                 <rect key="frame" x="58" y="240" width="259" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="gLb-EO-PWN"/>
@@ -756,8 +756,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Party" translatesAutoresizingMaskIntoConstraints="NO" id="npv-JX-ked">
-                                <rect key="frame" x="-12.5" y="96" width="400" height="136"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Meditation" translatesAutoresizingMaskIntoConstraints="NO" id="npv-JX-ked">
+                                <rect key="frame" x="-66" y="96" width="507" height="136"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBN-xb-1zF">
                                 <rect key="frame" x="330" y="153" width="19" height="22"/>
@@ -1242,7 +1242,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" bouncesZoom="NO" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="rWX-R9-xnG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.9686095119" green="0.9686878324" blue="0.96470659969999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="sectionIndexBackgroundColor" red="0.99858564139999995" green="0.93207794430000002" blue="0.7921349406" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <sections>
                             <tableViewSection id="Ejq-wv-NZi">
@@ -2028,7 +2028,7 @@
         <image name="Gray Oval" width="26" height="26"/>
         <image name="Green Oval" width="26" height="26"/>
         <image name="Left Arrow" width="170.5" height="170.5"/>
-        <image name="Party" width="400" height="275"/>
+        <image name="Meditation" width="506.5" height="266.5"/>
         <image name="QuestionBank" width="170.5" height="170.5"/>
         <image name="Right Arrow" width="170.5" height="170.5"/>
         <image name="Soulmate" width="180" height="134.5"/>
@@ -2041,9 +2041,6 @@
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

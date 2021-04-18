@@ -478,6 +478,8 @@ class E1_EmotionsViewController: UIViewController {
         try! realm.write {
             user!.userStressIndexRecord = userStressIndexRecord
         }
+        
+        sendStressReminderNotifications()
     }
     
     

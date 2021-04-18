@@ -32,7 +32,8 @@ class L1_LoginPageViewController: UIViewController, UNUserNotificationCenterDele
             calculateAverage_AllHealthData()
             
             self.loggingIn()
-            self.sendNotifications()
+            self.sendAskingStressLevelNotifications()
+            self.sendEncouragingQuoteNotifications()
         
             self.performSegue(withIdentifier: "loginSuccessfullySegue", sender: self)
         } else {
@@ -164,7 +165,7 @@ class L1_LoginPageViewController: UIViewController, UNUserNotificationCenterDele
     }
     
     
-    private func sendNotifications() {
+    private func sendAskingStressLevelNotifications() {
         let center = UNUserNotificationCenter.current()
         center.delegate = self
         
@@ -173,7 +174,6 @@ class L1_LoginPageViewController: UIViewController, UNUserNotificationCenterDele
         content.body = "What is your current stress level?"
         content.sound = .default
         content.categoryIdentifier = "stressLevelIdentifier"
-        content.userInfo = ["customData": "fizzbuzz"] // You can retrieve this when displaying notification
   
         // Setup trigger time
         var calendar = Calendar.current
@@ -184,8 +184,8 @@ class L1_LoginPageViewController: UIViewController, UNUserNotificationCenterDele
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
 
         // Create request
-        let uniqueID = UUID().uuidString // Keep a record of this if necessary
-        let request = UNNotificationRequest(identifier: uniqueID, content: content, trigger: trigger)
+        let stressLevelID = "stressLevelID"
+        let request = UNNotificationRequest(identifier: stressLevelID, content: content, trigger: trigger)
         center.add(request) { (error : Error?) in
             if let error = error {
                 print(error.localizedDescription)
@@ -201,34 +201,66 @@ class L1_LoginPageViewController: UIViewController, UNUserNotificationCenterDele
         center.setNotificationCategories([category])
     }
     
+    
+    private func sendEncouragingQuoteNotifications() {
+        let center = UNUserNotificationCenter.current()
+        center.delegate = self
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Encouraging Quote"
+        content.body = quotesList.randomElement()!
+        content.sound = .default
+        content.categoryIdentifier = "encouragingQuoteIdentifier"
+  
+        // Setup trigger time
+        var calendar = Calendar.current
+        calendar.timeZone = TimeZone.current
+        let dateComponents = DateComponents(calendar: calendar,
+                                            minute: 30)
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+
+        // Create request
+        let EncouragingQuoteID = "EncouragingQuoteID"
+        let request = UNNotificationRequest(identifier: EncouragingQuoteID, content: content, trigger: trigger)
+        center.add(request) { (error : Error?) in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         // Play sound and show alert to the user
         completionHandler([.list, .banner, .badge, .sound])
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        let heartRate = self.updateHeartRate()
-        let activity = self.updateActivity()
-        let mindfulTime = self.updateMindfulTime()
-        let sleepTime = self.updateSleepTime()
-        // Determine the user action
-        switch response.actionIdentifier {
-        case UNNotificationDismissActionIdentifier:
-            print("Dismiss Action")
-        case UNNotificationDefaultActionIdentifier:
-            print("Default")
-        case "high":
-            self.saveStressLevelIndex(index: 9, heartRate: heartRate, activity: activity, mindfulTime: mindfulTime, sleepTime: sleepTime)
-        case "aboveAverage":
-            self.saveStressLevelIndex(index: 7, heartRate: heartRate, activity: activity, mindfulTime: mindfulTime, sleepTime: sleepTime)
-        case "average":
-            self.saveStressLevelIndex(index: 5, heartRate: heartRate, activity: activity, mindfulTime: mindfulTime, sleepTime: sleepTime)
-        case "belowAverage":
-            self.saveStressLevelIndex(index: 3, heartRate: heartRate, activity: activity, mindfulTime: mindfulTime, sleepTime: sleepTime)
-        case "low":
-            self.saveStressLevelIndex(index: 1, heartRate: heartRate, activity: activity, mindfulTime: mindfulTime, sleepTime: sleepTime)
-        default:
-            print("Unknown action")
+        if response.notification.request.content.categoryIdentifier == "stressLevelIdentifier" {
+            let heartRate = self.updateHeartRate()
+            let activity = self.updateActivity()
+            let mindfulTime = self.updateMindfulTime()
+            let sleepTime = self.updateSleepTime()
+            // Determine the user action
+            switch response.actionIdentifier {
+            case UNNotificationDismissActionIdentifier:
+                print("Dismiss Action")
+            case UNNotificationDefaultActionIdentifier:
+                print("Default")
+            case "high":
+                self.saveStressLevelIndex(index: 9, heartRate: heartRate, activity: activity, mindfulTime: mindfulTime, sleepTime: sleepTime)
+            case "aboveAverage":
+                self.saveStressLevelIndex(index: 7, heartRate: heartRate, activity: activity, mindfulTime: mindfulTime, sleepTime: sleepTime)
+            case "average":
+                self.saveStressLevelIndex(index: 5, heartRate: heartRate, activity: activity, mindfulTime: mindfulTime, sleepTime: sleepTime)
+            case "belowAverage":
+                self.saveStressLevelIndex(index: 3, heartRate: heartRate, activity: activity, mindfulTime: mindfulTime, sleepTime: sleepTime)
+            case "low":
+                self.saveStressLevelIndex(index: 1, heartRate: heartRate, activity: activity, mindfulTime: mindfulTime, sleepTime: sleepTime)
+            default:
+                print("Unknown action")
+            }
         }
         completionHandler()
     }
@@ -258,6 +290,8 @@ class L1_LoginPageViewController: UIViewController, UNUserNotificationCenterDele
         try! realm.write {
             user!.userStressIndexRecord = userStressIndexRecord
         }
+        
+        sendStressReminderNotifications()
     }
     
     

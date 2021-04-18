@@ -12,6 +12,8 @@ target 'Soulmate' do
   pod 'MaterialComponents'
   pod 'Toast-Swift'
   pod 'SwiftChart'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
   
   target 'SoulmateTests' do
     inherit! :search_paths

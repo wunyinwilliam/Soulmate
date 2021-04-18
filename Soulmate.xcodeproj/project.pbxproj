@@ -37,6 +37,7 @@
 		7939FE1C25E09914007DC611 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7939FE1B25E09914007DC611 /* Assets.xcassets */; };
 		7944225425F9050000D65D46 /* S2_SettingsDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7944225325F9050000D65D46 /* S2_SettingsDetailsTableViewController.swift */; };
 		796D80F425E3A63A00161BE2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796D80F325E3A63A00161BE2 /* User.swift */; };
+		79755A4426299391007F4E5B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79755A4326299390007F4E5B /* GoogleService-Info.plist */; };
 		798D24EF26131201008ECBF8 /* A4d_ExpressionStructureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798D24EE26131201008ECBF8 /* A4d_ExpressionStructureViewController.swift */; };
 		7992DBE325F5364E00FD1502 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7992DBE225F5364E00FD1502 /* TabBarViewController.swift */; };
 		7992DBF625F6269C00FD1502 /* globalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7992DBF525F6269C00FD1502 /* globalVariables.swift */; };
@@ -166,6 +167,7 @@
 		7939FE1E25E09914007DC611 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		7944225325F9050000D65D46 /* S2_SettingsDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S2_SettingsDetailsTableViewController.swift; sourceTree = "<group>"; };
 		796D80F325E3A63A00161BE2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		79755A4326299390007F4E5B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		798D24EE26131201008ECBF8 /* A4d_ExpressionStructureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A4d_ExpressionStructureViewController.swift; sourceTree = "<group>"; };
 		7992DBE225F5364E00FD1502 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = "/Users/wunyinwilliam/Desktop/HKU/Year 4/ELEC4848FY/Phase 4 - Implementation/Soulmate/Soulmate/View Controllers/TabBarViewController.swift"; sourceTree = "<absolute>"; };
 		7992DBF525F6269C00FD1502 /* globalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = globalVariables.swift; sourceTree = "<group>"; };
@@ -393,6 +395,7 @@
 				7939FDE125E09912007DC611 /* Assets.xcassets */,
 				7939FDE325E09912007DC611 /* LaunchScreen.storyboard */,
 				7939FDDE25E0990E007DC611 /* Main.storyboard */,
+				79755A4326299390007F4E5B /* GoogleService-Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -588,6 +591,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7939FDE525E09912007DC611 /* LaunchScreen.storyboard in Resources */,
+				79755A4426299391007F4E5B /* GoogleService-Info.plist in Resources */,
 				7939FDE225E09912007DC611 /* Assets.xcassets in Resources */,
 				7939FDE025E0990E007DC611 /* Main.storyboard in Resources */,
 			);

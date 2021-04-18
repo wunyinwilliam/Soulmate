@@ -8,23 +8,23 @@
 import UIKit
 import BackgroundTasks
 import Kommunicate
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         authorizeHealthKit()
         self.registerBackgroundTasks()
         Kommunicate.setup(applicationId: "25bf91ac7fe1e011b0882253edbc2cf1d")       // Set up Chatbot
+        FirebaseApp.configure()
         return true
     }
     
     private func registerBackgroundTasks() {
         // Ask permission for notifications
         let center = UNUserNotificationCenter.current()
-        
         center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
             if granted {
                 print("UNUserNotificationCenter: Permission granted")
@@ -32,6 +32,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("UNUserNotificationCenter: Permission denied")
             }
         }
+        print(" ******* PENDING NOTIFICATIONS *******")
+        center.getPendingNotificationRequests(completionHandler: { requests in
+            for request in requests {
+                print(request)
+            }
+        })
     }
     
 

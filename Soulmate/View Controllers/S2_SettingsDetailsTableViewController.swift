@@ -23,7 +23,7 @@ class S2_SettingsDetailsTableViewController: UITableViewController {
         case "User Info":
             SectionsList = [["Name", "Icon"], ["Email"], ["Password"]]
         case "Notifications":
-            SectionsList = [[""], [""], [""], [""], [""]]
+            SectionsList = [["Disable Asking Stress Level Notifications"], ["Disable Encouraging Quote Notifications"], ["Disable Stress Reminders Notifications"], ["Disable All Notifications"]]
         default:
             SectionsList = [["Active Energy", "Exercise Minutes", "Stand Minutes", "Steps", "Walking & Running Distance"], ["Heart Rate", "Resting Heart Rate"], ["Blood Oxygen"], ["Mindful Minutes"], ["Sleep Hours"]]
         }
@@ -78,7 +78,6 @@ class S2_SettingsDetailsTableViewController: UITableViewController {
         if let textLabel = cell.textLabel {
             textLabel.text = SectionsList[indexPath.section][indexPath.row]
             if self.title == "Notifications" {
-                textLabel.text = "Disable Notifications"
                 textLabel.font = UIFont.boldSystemFont(ofSize: 17.0)
                 textLabel.textColor = .systemRed
                 cell.accessoryType = .none
@@ -107,7 +106,16 @@ class S2_SettingsDetailsTableViewController: UITableViewController {
             }
         case "Notifications":
             let center = UNUserNotificationCenter.current()
-            center.removeAllPendingNotificationRequests()
+            switch indexPath.section {
+            case 0:
+                center.removePendingNotificationRequests(withIdentifiers: ["stressLevelID"])
+            case 1:
+                center.removePendingNotificationRequests(withIdentifiers: ["EncouragingQuoteID"])
+            case 2:
+                center.removePendingNotificationRequests(withIdentifiers: ["stressReminderID"])
+            default:
+                center.removeAllPendingNotificationRequests()
+            }
             self.navigationController?.popViewController(animated: true)
         default:
             switch indexPath.section {

@@ -144,5 +144,7 @@ class H1_HomeViewController: UIViewController {
         try! realm.write {
             user!.userStressIndexRecord = userStressIndexRecord
         }
+        
+        sendStressReminderNotifications()
     }
 }

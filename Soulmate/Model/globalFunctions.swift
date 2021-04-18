@@ -745,3 +745,34 @@ func heightForView(text:String, font:UIFont, width:CGFloat) -> CGFloat{
     label.sizeToFit()
     return label.frame.height
 }
+
+
+
+// MARK: - Notifications
+
+func sendStressReminderNotifications() {
+    if let latestRecord = currentuser.userStressIndexRecord?.records.last {
+        let center = UNUserNotificationCenter.current()
+        let stressReminderID = "stressReminderID"
+        if latestRecord.stressIndex >= 8 {
+            let content = UNMutableNotificationContent()
+            content.title = "Stress Reminder"
+            content.body = "You are estimated as high stress level recently. Let's have some relaxing time."
+            content.sound = .default
+            content.categoryIdentifier = "stressReminderIdentifier"
+
+            // Setup trigger time
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60*30, repeats: false)
+
+            // Create request
+            let request = UNNotificationRequest(identifier: stressReminderID, content: content, trigger: trigger)
+            center.add(request) { (error : Error?) in
+                if let error = error {
+                    print(error.localizedDescription)
+                }
+            }
+        } else {
+            center.removePendingNotificationRequests(withIdentifiers: [stressReminderID])
+        }
+    }
+}
