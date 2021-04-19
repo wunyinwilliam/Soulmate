@@ -106,52 +106,57 @@ func extractActivityHealthData() {
     }
     
     ProfileDataStore.getMostRecentAccumulateSample(noOfDays: defaultNoOfDays, for: activeEnergySampleType) { (sample, error) in
-        guard let sample = sample else {
+        guard var sample = sample else {
             if let error = error {
                 print(error)
             }
             return
         }
+        sample.removeLast()         // Don't use today's record
         userHealthProfile.activeEnergy = sample.reversed()
     }
     
     ProfileDataStore.getMostRecentAccumulateSample(noOfDays: defaultNoOfDays, for: exerciseMinutesSampleType) { (sample, error) in
-        guard let sample = sample else {
+        guard var sample = sample else {
             if let error = error {
                 print(error)
             }
             return
         }
+        sample.removeLast()         // Don't use today's record
         userHealthProfile.exerciseMinutes = sample.reversed()
     }
     
     ProfileDataStore.getMostRecentAccumulateSample(noOfDays: defaultNoOfDays, for: standMinutesSampleType) { (sample, error) in
-        guard let sample = sample else {
+        guard var sample = sample else {
             if let error = error {
                 print(error)
             }
             return
         }
+        sample.removeLast()         // Don't use today's record
         userHealthProfile.standMinutes = sample.reversed()
     }
     
     ProfileDataStore.getMostRecentAccumulateSample(noOfDays: defaultNoOfDays, for: stepsQuantityType) { (sample, error) in
-        guard let sample = sample else {
+        guard var sample = sample else {
             if let error = error {
                 print(error)
             }
             return
         }
+        sample.removeLast()         // Don't use today's record
         userHealthProfile.steps = sample.reversed()
     }
     
     ProfileDataStore.getMostRecentAccumulateSample(noOfDays: defaultNoOfDays, for: walkingAndRunningDistanceSampleType) { (sample, error) in
-        guard let sample = sample else {
+        guard var sample = sample else {
             if let error = error {
                 print(error)
             }
             return
         }
+        sample.removeLast()         // Don't use today's record
         userHealthProfile.walkingRunningDistance = sample.reversed()
     }
     
@@ -744,35 +749,4 @@ func heightForView(text:String, font:UIFont, width:CGFloat) -> CGFloat{
 
     label.sizeToFit()
     return label.frame.height
-}
-
-
-
-// MARK: - Notifications
-
-func sendStressReminderNotifications() {
-    if let latestRecord = currentuser.userStressIndexRecord?.records.last {
-        let center = UNUserNotificationCenter.current()
-        let stressReminderID = "stressReminderID"
-        if latestRecord.stressIndex >= 8 {
-            let content = UNMutableNotificationContent()
-            content.title = "Stress Reminder"
-            content.body = "You are estimated as high stress level recently. Let's have some relaxing time."
-            content.sound = .default
-            content.categoryIdentifier = "stressReminderIdentifier"
-
-            // Setup trigger time
-            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60*30, repeats: false)
-
-            // Create request
-            let request = UNNotificationRequest(identifier: stressReminderID, content: content, trigger: trigger)
-            center.add(request) { (error : Error?) in
-                if let error = error {
-                    print(error.localizedDescription)
-                }
-            }
-        } else {
-            center.removePendingNotificationRequests(withIdentifiers: [stressReminderID])
-        }
-    }
 }

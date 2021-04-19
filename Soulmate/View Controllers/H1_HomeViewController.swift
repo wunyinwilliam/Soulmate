@@ -145,6 +145,7 @@ class H1_HomeViewController: UIViewController {
             user!.userStressIndexRecord = userStressIndexRecord
         }
         
-        sendStressReminderNotifications()
+        let tempClass = StressLevel_Notifications()
+        tempClass.sendStressReminderNotifications(stressLevel: stressReminder_Notifications_StressLevel)
     }
 }

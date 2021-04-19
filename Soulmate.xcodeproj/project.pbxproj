@@ -39,6 +39,7 @@
 		796D80F425E3A63A00161BE2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796D80F325E3A63A00161BE2 /* User.swift */; };
 		79755A4426299391007F4E5B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79755A4326299390007F4E5B /* GoogleService-Info.plist */; };
 		798D24EF26131201008ECBF8 /* A4d_ExpressionStructureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798D24EE26131201008ECBF8 /* A4d_ExpressionStructureViewController.swift */; };
+		798EB588262D284300D70C1D /* StressLevel_Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798EB587262D284300D70C1D /* StressLevel_Notifications.swift */; };
 		7992DBE325F5364E00FD1502 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7992DBE225F5364E00FD1502 /* TabBarViewController.swift */; };
 		7992DBF625F6269C00FD1502 /* globalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7992DBF525F6269C00FD1502 /* globalVariables.swift */; };
 		7992DBFD25F6279B00FD1502 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7992DBFC25F6279B00FD1502 /* extensions.swift */; };
@@ -169,6 +170,7 @@
 		796D80F325E3A63A00161BE2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		79755A4326299390007F4E5B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		798D24EE26131201008ECBF8 /* A4d_ExpressionStructureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A4d_ExpressionStructureViewController.swift; sourceTree = "<group>"; };
+		798EB587262D284300D70C1D /* StressLevel_Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StressLevel_Notifications.swift; sourceTree = "<group>"; };
 		7992DBE225F5364E00FD1502 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = "/Users/wunyinwilliam/Desktop/HKU/Year 4/ELEC4848FY/Phase 4 - Implementation/Soulmate/Soulmate/View Controllers/TabBarViewController.swift"; sourceTree = "<absolute>"; };
 		7992DBF525F6269C00FD1502 /* globalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = globalVariables.swift; sourceTree = "<group>"; };
 		7992DBFC25F6279B00FD1502 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
@@ -357,6 +359,7 @@
 				79E0979025EE374700BA5746 /* UserHealthProfile.swift */,
 				79C96D3C25FCED39002CEA9A /* StressIndexRecord.swift */,
 				7914D94A260B1FC700EF8852 /* Issue.swift */,
+				798EB587262D284300D70C1D /* StressLevel_Notifications.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -804,6 +807,7 @@
 				7914D93D260B1D9A00EF8852 /* A5_ActivitiesViewController.swift in Sources */,
 				7914D92F260B1D7900EF8852 /* A3_GoalsViewController.swift in Sources */,
 				79B40E8B2619EC12009E3E32 /* Login.swift in Sources */,
+				798EB588262D284300D70C1D /* StressLevel_Notifications.swift in Sources */,
 				7914D928260B1D6E00EF8852 /* A2_RelaxingTipsViewController.swift in Sources */,
 				79E097D025EE41C800BA5746 /* I1_InformationTableViewController.swift in Sources */,
 				79BC112025F32AEA004C1F19 /* UserHealthNormalRange.swift in Sources */,

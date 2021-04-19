@@ -207,7 +207,7 @@ class E3_SpecificHealthDataViewController: UIViewController, ChartDelegate {
             
         case "activity":
             if let activeEnergy = currentuser.userNormalRange?.activeEnergy {
-                if Calendar.current.isDateInWeekend(Date()) {
+                if Calendar.current.isDateInWeekend(Date().addingTimeInterval(-1 * 60 * 60 * 24)) {
                     let min = activeEnergy.weekends_min
                     let max = activeEnergy.weekends_max
                     for count in 0...data.count {
@@ -318,7 +318,7 @@ class E3_SpecificHealthDataViewController: UIViewController, ChartDelegate {
                         """
 
                 case "activity":
-                    let date_shown = dF.string(from: Calendar.current.startOfDay(for: Date().addingTimeInterval(-TimeInterval(dataIndex!) * 60 * 60 * 24)))
+                    let date_shown = dF.string(from: Calendar.current.startOfDay(for: Date().addingTimeInterval((-1 - TimeInterval(dataIndex!)) * 60 * 60 * 24)))
                     self.lb_chartData.text = """
                         \(date_shown)
                         \(String(value!.rounded(toPlaces: 2))) kcal

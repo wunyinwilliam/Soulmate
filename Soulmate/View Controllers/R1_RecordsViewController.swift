@@ -31,11 +31,11 @@ class R1_RecordsViewController: UIViewController {
         self.detailTableView.delegate = self
         self.detailTableView.dataSource = self
 
+        self.setupLoadingIndicator()
         self.setupUserIconButton()
-        self.setupUI()
         self.setupCalendar()
         self.setupRefreshButton()
-        self.setupLoadingIndicator()
+        self.setupUI()
     }
     
     
@@ -161,7 +161,6 @@ class R1_RecordsViewController: UIViewController {
     // MARK: - setupLoadingIndicator
     private func setupLoadingIndicator() {
         overrideUserInterfaceStyle = .light
-        self.view.backgroundColor = .white
         self.view.addSubview(loadingIndicator)
         
         NSLayoutConstraint.activate([
@@ -218,7 +217,8 @@ extension R1_RecordsViewController: CalendarViewDelegate {
     }
     
     func calendar(_ calendar: CalendarView, didDeselectDate date: Date) {
-        
+        self.detailTableView.isHidden = true
+        self.lb_average.isHidden = true
     }
     
     func calendar(_ calendar: CalendarView, canSelectDate date: Date) -> Bool {
@@ -227,8 +227,10 @@ extension R1_RecordsViewController: CalendarViewDelegate {
     
     func calendar(_ calendar: CalendarView, didSelectDate date : Date, withEvents events: [CalendarEvent]) {
         detailTableView.reloadData()
+        self.detailTableView.isHidden = false
+        self.lb_average.isHidden = false
     }
-       
+           
     func calendar(_ calendar: CalendarView, didLongPressDate date : Date, withEvents events: [CalendarEvent]?) {
     }
 }
@@ -236,6 +238,7 @@ extension R1_RecordsViewController: CalendarViewDelegate {
 
 extension R1_RecordsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(calendarView.selectedDates)
         if calendarView.selectedDates.count != 0 {
             let selectedDate = calendarView.selectedDates[0]
             return retrivestressIndexRecord(selectedDate).count

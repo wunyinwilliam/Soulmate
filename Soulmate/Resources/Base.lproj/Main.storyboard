@@ -862,11 +862,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Vb-Rp-ShV" customClass="CalendarView" customModule="KDCalendar">
-                                <rect key="frame" x="0.0" y="96" width="375" height="290"/>
+                                <rect key="frame" x="0.0" y="96" width="375" height="280"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="ff7-X4-T5v"/>
+                                </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9DO-eU-Hrp">
-                                <rect key="frame" x="0.0" y="386" width="375" height="193"/>
+                                <rect key="frame" x="0.0" y="376" width="375" height="203"/>
                                 <color key="backgroundColor" red="0.97254901959999995" green="0.92941176469999998" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="R1TableCell" textLabel="iPx-1Y-tit" detailTextLabel="Io2-v3-zFP" style="IBUITableViewCellStyleValue1" id="LzE-4Q-R2z">
@@ -910,17 +913,16 @@
                         <viewLayoutGuide key="safeArea" id="N1c-6I-OAb"/>
                         <color key="backgroundColor" red="0.97254901959999995" green="0.92941176469999998" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="9DO-eU-Hrp" firstAttribute="leading" secondItem="6Vb-Rp-ShV" secondAttribute="leading" id="2oj-GO-1pb"/>
-                            <constraint firstItem="9DO-eU-Hrp" firstAttribute="top" secondItem="6Vb-Rp-ShV" secondAttribute="bottom" id="8gk-TC-nKK"/>
-                            <constraint firstItem="9DO-eU-Hrp" firstAttribute="trailing" secondItem="6Vb-Rp-ShV" secondAttribute="trailing" id="DBk-Me-viW"/>
+                            <constraint firstItem="6Vb-Rp-ShV" firstAttribute="leading" secondItem="N1c-6I-OAb" secondAttribute="leading" id="3e1-H6-W0Q"/>
+                            <constraint firstItem="9DO-eU-Hrp" firstAttribute="top" secondItem="6Vb-Rp-ShV" secondAttribute="bottom" id="7vt-f9-XRQ"/>
                             <constraint firstItem="IU1-Ug-qAn" firstAttribute="bottom" secondItem="N1c-6I-OAb" secondAttribute="bottom" id="IiZ-PH-AKb"/>
-                            <constraint firstItem="6Vb-Rp-ShV" firstAttribute="centerX" secondItem="h9t-J8-g2m" secondAttribute="centerX" id="LSO-5E-eJK"/>
-                            <constraint firstItem="9DO-eU-Hrp" firstAttribute="leading" secondItem="IU1-Ug-qAn" secondAttribute="leading" id="MuH-mR-gRA"/>
-                            <constraint firstItem="IU1-Ug-qAn" firstAttribute="top" secondItem="9DO-eU-Hrp" secondAttribute="bottom" id="SyU-cI-3kC"/>
-                            <constraint firstItem="6Vb-Rp-ShV" firstAttribute="leading" secondItem="N1c-6I-OAb" secondAttribute="leading" id="WKs-yO-r0O"/>
-                            <constraint firstItem="N1c-6I-OAb" firstAttribute="bottom" secondItem="6Vb-Rp-ShV" secondAttribute="bottom" constant="232" id="bLM-Py-W97"/>
-                            <constraint firstItem="9DO-eU-Hrp" firstAttribute="trailing" secondItem="IU1-Ug-qAn" secondAttribute="trailing" id="ibq-0f-uev"/>
-                            <constraint firstItem="6Vb-Rp-ShV" firstAttribute="top" secondItem="N1c-6I-OAb" secondAttribute="top" id="swU-Jj-qUQ"/>
+                            <constraint firstItem="6Vb-Rp-ShV" firstAttribute="trailing" secondItem="N1c-6I-OAb" secondAttribute="trailing" id="JkD-P4-FBM"/>
+                            <constraint firstItem="6Vb-Rp-ShV" firstAttribute="top" secondItem="N1c-6I-OAb" secondAttribute="top" id="RnT-w9-Dn9"/>
+                            <constraint firstItem="IU1-Ug-qAn" firstAttribute="leading" secondItem="N1c-6I-OAb" secondAttribute="leading" id="TXJ-Yz-UBu"/>
+                            <constraint firstItem="IU1-Ug-qAn" firstAttribute="top" secondItem="9DO-eU-Hrp" secondAttribute="bottom" id="ayE-bw-sac"/>
+                            <constraint firstItem="9DO-eU-Hrp" firstAttribute="trailing" secondItem="N1c-6I-OAb" secondAttribute="trailing" id="jec-id-1Ya"/>
+                            <constraint firstItem="IU1-Ug-qAn" firstAttribute="trailing" secondItem="N1c-6I-OAb" secondAttribute="trailing" id="sBp-wx-2ur"/>
+                            <constraint firstItem="9DO-eU-Hrp" firstAttribute="leading" secondItem="N1c-6I-OAb" secondAttribute="leading" id="sCo-X3-jmt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tFg-rJ-U8f"/>
@@ -963,7 +965,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="1zF-yc-1vW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.97254901959999995" green="0.92941176469999998" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1204,6 +1205,7 @@
                         <outlet property="bn_save" destination="Lmf-Oi-Dlc" id="pAm-5x-UXa"/>
                         <outlet property="lb_range_weekdays" destination="GJQ-Or-dwr" id="lJD-j2-Ick"/>
                         <outlet property="lb_range_weekends" destination="c5T-fj-ou7" id="SWh-zQ-2OY"/>
+                        <outlet property="lb_setManual" destination="WmZ-U7-NdO" id="ZK0-Hs-i4L"/>
                         <outlet property="lb_weekdays" destination="0uA-AR-4Vg" id="kNB-Vd-FwY"/>
                         <outlet property="lb_weekends" destination="PG0-VP-rdE" id="hDr-U9-S4k"/>
                         <outlet property="stepper_high_weekdays" destination="CVN-ag-g0K" id="KlU-WB-k9i"/>

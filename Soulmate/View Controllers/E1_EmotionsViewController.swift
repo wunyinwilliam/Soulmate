@@ -479,7 +479,8 @@ class E1_EmotionsViewController: UIViewController {
             user!.userStressIndexRecord = userStressIndexRecord
         }
         
-        sendStressReminderNotifications()
+        let tempClass = StressLevel_Notifications()
+        tempClass.sendStressReminderNotifications(stressLevel: stressReminder_Notifications_StressLevel)
     }
     
     

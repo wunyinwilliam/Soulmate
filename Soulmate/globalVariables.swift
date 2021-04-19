@@ -9,9 +9,14 @@ import Foundation
 
 let defaultNoOfSamples: Int = 1000
 let defaultNoOfDays: Int = 100
+let askingStressLevelNotificationID = "AskingStressLevelID"
+let encouragingQuoteNotificationID = "EncouragingQuoteID"
+let stressReminderNotificationID = "StressReminderID"
 
 var currentuser = User()
 var userHealthProfile = UserHealthProfile()
+var stressReminder_Notifications_Enable = true
+var stressReminder_Notifications_StressLevel = 8
 
 var positiveNeutralNegativeList = ["positive", "neutral", "negative"]
 var emotionsList = ["happy", "sad", "angry", "worried", "calm", "satisfied", "confident", "bored", "stressful"]

@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(" ******* PENDING NOTIFICATIONS *******")
         center.getPendingNotificationRequests(completionHandler: { requests in
             for request in requests {
-                print(request)
+                print(request.identifier)
             }
         })
     }

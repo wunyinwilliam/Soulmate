@@ -7,8 +7,9 @@
 
 import UIKit
 import RealmSwift
+import MaterialComponents
 
-class S3_SettingsMoreDetailsViewController: UIViewController {
+class S3_SettingsMoreDetailsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     
     // MARK: - Variables
@@ -23,11 +24,26 @@ class S3_SettingsMoreDetailsViewController: UIViewController {
     @IBOutlet weak var stepper_low_weekends: UIStepper!
     @IBOutlet weak var stepper_high_weekends: UIStepper!
     
+    @IBOutlet weak var lb_setManual: UILabel!
     @IBOutlet weak var switch_manual: UISwitch!
     @IBOutlet weak var bn_save: UIBarButtonItem!
     
     var places: Int = 0
     var unit: String = ""
+    
+    let bn_hour = MDCButton()
+    let bn_day = MDCButton()
+    let bn_week = MDCButton()
+    let lb_notification_frequency = UILabel()
+    let datePicker_notification_frequency = UIDatePicker()
+    let pickerView_notification_frequency = UIPickerView()
+    
+    let minutesList = Array(0...59)
+    let hoursList = Array(0...23)
+    let weekdaysList = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    let stressLevelList = Array(0...10)
+    var showing = -1
+    var dataFromPickerView = ""
 
     
     // MARK: - Actions
@@ -255,6 +271,15 @@ class S3_SettingsMoreDetailsViewController: UIViewController {
                 self.stepper_high_weekends.value = data.weekends_max
                 self.updateLabels()
             }
+        case "Asking Stress Level":
+            self.hideAllViews()
+            self.setUpNotificationViews()
+        case "Encouraging Quotes":
+            self.hideAllViews()
+            self.setUpNotificationViews()
+        case "Stress Reminders":
+            self.hideAllViews()
+            self.setUpStressRemindersViews()
         default:
             print("ERROR: Invalid Data Type")
         }
@@ -299,7 +324,6 @@ class S3_SettingsMoreDetailsViewController: UIViewController {
     
     
     private func saveData() {
-        
         let realm = try! Realm()
         try! realm.safeWrite {
             switch self.title {
@@ -423,9 +447,183 @@ class S3_SettingsMoreDetailsViewController: UIViewController {
                         calculateAverage_SleepHealthData()
                     }
                 }
+            case "Asking Stress Level":
+                let tempClass = StressLevel_Notifications()
+                switch showing {
+                case 0:
+                    tempClass.sendAskingStressLevelNotifications(min: Int(dataFromPickerView), hour: nil, weekday: nil)
+                case 1:
+                    tempClass.sendAskingStressLevelNotifications(min: nil, hour: Int(dataFromPickerView), weekday: nil)
+                default:
+                    tempClass.sendAskingStressLevelNotifications(min: nil, hour: nil, weekday: weekdaysList.firstIndex(of: dataFromPickerView))
+                }
+                self.view.makeToast("Change Frequency Successfully", duration: 1.0, position: .bottom)
+            case "Encouraging Quotes":
+                let tempClass = StressLevel_Notifications()
+                switch showing {
+                case 0:
+                    tempClass.sendEncouragingQuoteNotifications(min: Int(dataFromPickerView), hour: nil, weekday: nil)
+                case 1:
+                    tempClass.sendEncouragingQuoteNotifications(min: nil, hour: Int(dataFromPickerView), weekday: nil)
+                default:
+                    tempClass.sendEncouragingQuoteNotifications(min: nil, hour: nil, weekday: weekdaysList.firstIndex(of: dataFromPickerView))
+                }
+                self.view.makeToast("Change Frequency Successfully", duration: 1.0, position: .bottom)
+            case "Stress Reminders":
+                let tempClass = StressLevel_Notifications()
+                stressReminder_Notifications_StressLevel = Int(dataFromPickerView)!
+                tempClass.sendStressReminderNotifications(stressLevel: stressReminder_Notifications_StressLevel)
+                self.view.makeToast("Change Frequency Successfully", duration: 1.0, position: .bottom)
             default:
                 print("ERROR: Invalid Data Type")
             }
         }
     }
+    
+    private func hideAllViews() {
+        self.lb_weekdays.isHidden = true
+        self.lb_range_weekdays.isHidden = true
+        self.stepper_low_weekdays.isHidden = true
+        self.stepper_high_weekdays.isHidden = true
+        
+        self.lb_weekends.isHidden = true
+        self.lb_range_weekends.isHidden = true
+        self.stepper_low_weekends.isHidden = true
+        self.stepper_high_weekends.isHidden = true
+        
+        self.lb_setManual.isHidden = true
+        self.switch_manual.isHidden = true
+    }
+    
+    private func setUpNotificationViews() {
+        self.bn_hour.frame = CGRect(x: 60.0, y: 150.0, width: 255.0, height: 50.0)
+        self.bn_hour.center.x = self.view.center.x
+        self.bn_hour.setTitle("Send Every Hour", for: .normal)
+        self.bn_hour.applyContainedTheme(withScheme: globalContainerScheme())
+        self.bn_hour.addTarget(self, action: #selector(pressed_bn_hour), for: .touchUpInside)
+        self.view.addSubview(bn_hour)
+        
+        self.bn_day.frame = CGRect(x: 60.0, y: 210.0, width: 255.0, height: 50.0)
+        self.bn_day.center.x = self.view.center.x
+        self.bn_day.setTitle("Send Every Day", for: .normal)
+        self.bn_day.applyContainedTheme(withScheme: globalContainerScheme())
+        self.bn_day.addTarget(self, action: #selector(pressed_bn_day), for: .touchUpInside)
+        self.view.addSubview(bn_day)
+        
+        self.bn_week.frame = CGRect(x: 60.0, y: 270.0, width: 255.0, height: 50.0)
+        self.bn_week.center.x = self.view.center.x
+        self.bn_week.setTitle("Send Every Week", for: .normal)
+        self.bn_week.applyContainedTheme(withScheme: globalContainerScheme())
+        self.bn_week.addTarget(self, action: #selector(pressed_bn_week), for: .touchUpInside)
+        self.view.addSubview(bn_week)
+        
+        self.lb_notification_frequency.frame = CGRect(x: 60.0, y: 350.0, width: 255.0, height: 50.0)
+        self.lb_notification_frequency.center.x = self.view.center.x
+        self.lb_notification_frequency.textAlignment = .center
+        self.view.addSubview(lb_notification_frequency)
+        self.lb_notification_frequency.isHidden = true
+                
+        self.pickerView_notification_frequency.frame = CGRect(x: 0.0, y: 375.0, width: 320.0, height: 250.0)
+        self.pickerView_notification_frequency.center.x = self.view.center.x
+        self.pickerView_notification_frequency.delegate = self
+        self.pickerView_notification_frequency.dataSource = self
+        self.view.addSubview(pickerView_notification_frequency)
+        self.pickerView_notification_frequency.isHidden = true
+    }
+        
+    @objc func pressed_bn_hour(_ sender: UIButton) -> Void {
+        self.showing = 0
+        self.pickerView_notification_frequency.reloadAllComponents()
+        self.lb_notification_frequency.isHidden = false
+        self.pickerView_notification_frequency.isHidden = false
+        self.lb_notification_frequency.text = "Send in which minute?"
+    }
+    
+    @objc func pressed_bn_day(_ sender: UIButton) -> Void {
+        self.showing = 1
+        self.pickerView_notification_frequency.reloadAllComponents()
+        self.lb_notification_frequency.isHidden = false
+        self.pickerView_notification_frequency.isHidden = false
+        self.lb_notification_frequency.text = "Send in which hour?"
+        
+    }
+    
+    @objc func pressed_bn_week(_ sender: UIButton) -> Void {
+        self.showing = 2
+        self.pickerView_notification_frequency.reloadAllComponents()
+        self.lb_notification_frequency.isHidden = false
+        self.pickerView_notification_frequency.isHidden = false
+        self.lb_notification_frequency.text = "Send in which day?"
+    }
+    
+    private func setUpStressRemindersViews() {
+        self.lb_notification_frequency.frame = CGRect(x: 60.0, y: 150.0, width: 255.0, height: 50.0)
+        self.lb_notification_frequency.center.x = self.view.center.x
+        self.lb_notification_frequency.textAlignment = .center
+        self.lb_notification_frequency.text = "When exceed which stress level, send notifications?"
+        self.lb_notification_frequency.numberOfLines = 0
+        self.view.addSubview(lb_notification_frequency)
+        self.lb_notification_frequency.isHidden = false
+        
+        self.pickerView_notification_frequency.frame = CGRect(x: 0.0, y: 175.0, width: 320.0, height: 250.0)
+        self.pickerView_notification_frequency.center.x = self.view.center.x
+        self.pickerView_notification_frequency.delegate = self
+        self.pickerView_notification_frequency.dataSource = self
+        self.pickerView_notification_frequency.selectRow(7, inComponent: 0, animated: false)
+        self.view.addSubview(pickerView_notification_frequency)
+        self.pickerView_notification_frequency.isHidden = false
+    }
+    
+    
+    // MARK: UIPickerViewDelegate
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if self.title == "Stress Reminders" {
+            return stressLevelList.count
+        } else {
+            switch self.showing {
+            case 0:
+                return minutesList.count
+            case 1:
+                return hoursList.count
+            default:
+                return weekdaysList.count
+            }
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if self.title == "Stress Reminders" {
+            return String(stressLevelList[row])
+        } else {
+            switch self.showing {
+            case 0:
+                return String(minutesList[row])
+            case 1:
+                return String(hoursList[row])
+            default:
+                return weekdaysList[row]
+            }
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if self.title == "Stress Reminders" {
+            dataFromPickerView = String(stressLevelList[row])
+        } else {
+            switch self.showing {
+            case 0:
+                dataFromPickerView = String(minutesList[row])
+            case 1:
+                dataFromPickerView = String(hoursList[row])
+            default:
+                dataFromPickerView = weekdaysList[row]
+            }
+        }
+    }
+
 }

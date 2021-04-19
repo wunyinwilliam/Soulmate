@@ -62,7 +62,7 @@ class R2_RecordsDetailTableViewController: UITableViewController {
             self.lb_activeEnergy.text = String(record.activeEnergy.rounded(toPlaces: 2)) + " kcal"
             var activeEnergy_min: Double = 200.0
             var activeEnergy_max: Double = 1000.0
-            if Calendar.current.isDateInWeekend(record.date) {
+            if Calendar.current.isDateInWeekend(record.date.addingTimeInterval(-1*60*60*24)) {
                 activeEnergy_min = currentuser.userNormalRange?.activeEnergy?.weekends_min ?? 0.0
                 activeEnergy_max = currentuser.userNormalRange?.activeEnergy?.weekends_max ?? 0.0
             } else {
