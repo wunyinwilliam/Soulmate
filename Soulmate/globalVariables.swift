@@ -12,6 +12,7 @@ let defaultNoOfDays: Int = 100
 let askingStressLevelNotificationID = "AskingStressLevelID"
 let encouragingQuoteNotificationID = "EncouragingQuoteID"
 let stressReminderNotificationID = "StressReminderID"
+let class_StressLevel_Notifications = StressLevel_Notifications()
 
 var currentuser = User()
 var userHealthProfile = UserHealthProfile()

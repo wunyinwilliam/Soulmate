@@ -113,8 +113,7 @@ class S2_SettingsDetailsTableViewController: UITableViewController {
                 case 0:
                     self.performSegue(withIdentifier: "S2ToS3Segue", sender: self)
                 case 1:
-                    let tempClass = StressLevel_Notifications()
-                    tempClass.sendAskingStressLevelNotifications(min: 0, hour: nil, weekday: nil)
+                    class_StressLevel_Notifications.sendAskingStressLevelNotifications(min: 0, hour: nil, weekday: nil)
                     self.view.makeToast("Restore Successfully", duration: 1.0, position: .center)
                 default:
                     center.removePendingNotificationRequests(withIdentifiers: [askingStressLevelNotificationID])
@@ -125,8 +124,7 @@ class S2_SettingsDetailsTableViewController: UITableViewController {
                 case 0:
                     self.performSegue(withIdentifier: "S2ToS3Segue", sender: self)
                 case 1:
-                    let tempClass = StressLevel_Notifications()
-                    tempClass.sendEncouragingQuoteNotifications(min: 0, hour: nil, weekday: nil)
+                    class_StressLevel_Notifications.sendEncouragingQuoteNotifications(min: 0, hour: nil, weekday: nil)
                     self.view.makeToast("Restore Successfully", duration: 1.0, position: .center)
                 default:
                     center.removePendingNotificationRequests(withIdentifiers: [encouragingQuoteNotificationID])
@@ -137,8 +135,7 @@ class S2_SettingsDetailsTableViewController: UITableViewController {
                 case 0:
                     self.performSegue(withIdentifier: "S2ToS3Segue", sender: self)
                 case 1:
-                    let tempClass = StressLevel_Notifications()
-                    tempClass.sendStressReminderNotifications(stressLevel: 8)
+                    class_StressLevel_Notifications.sendStressReminderNotifications(stressLevel: 8)
                     self.view.makeToast("Restore Successfully", duration: 1.0, position: .center)
                 default:
                     center.removePendingNotificationRequests(withIdentifiers: [stressReminderNotificationID])
@@ -148,10 +145,9 @@ class S2_SettingsDetailsTableViewController: UITableViewController {
                 switch indexPath.row {
                 case 0:
                     self.view.makeToast("Restore Successfully", duration: 1.0, position: .center)
-                    let tempClass = StressLevel_Notifications()
-                    tempClass.sendAskingStressLevelNotifications(min: 0, hour: nil, weekday: nil)
-                    tempClass.sendEncouragingQuoteNotifications(min: 0, hour: nil, weekday: nil)
-                    tempClass.sendStressReminderNotifications(stressLevel: 8)
+                    class_StressLevel_Notifications.sendAskingStressLevelNotifications(min: 0, hour: nil, weekday: nil)
+                    class_StressLevel_Notifications.sendEncouragingQuoteNotifications(min: 0, hour: nil, weekday: nil)
+                    class_StressLevel_Notifications.sendStressReminderNotifications(stressLevel: 8)
                 default:
                     center.removeAllPendingNotificationRequests()
                     self.view.makeToast("Disable Successfully", duration: 1.0, position: .center)

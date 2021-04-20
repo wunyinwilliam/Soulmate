@@ -448,31 +448,28 @@ class S3_SettingsMoreDetailsViewController: UIViewController, UIPickerViewDelega
                     }
                 }
             case "Asking Stress Level":
-                let tempClass = StressLevel_Notifications()
                 switch showing {
                 case 0:
-                    tempClass.sendAskingStressLevelNotifications(min: Int(dataFromPickerView), hour: nil, weekday: nil)
+                    class_StressLevel_Notifications.sendAskingStressLevelNotifications(min: Int(dataFromPickerView), hour: nil, weekday: nil)
                 case 1:
-                    tempClass.sendAskingStressLevelNotifications(min: nil, hour: Int(dataFromPickerView), weekday: nil)
+                    class_StressLevel_Notifications.sendAskingStressLevelNotifications(min: nil, hour: Int(dataFromPickerView), weekday: nil)
                 default:
-                    tempClass.sendAskingStressLevelNotifications(min: nil, hour: nil, weekday: weekdaysList.firstIndex(of: dataFromPickerView))
+                    class_StressLevel_Notifications.sendAskingStressLevelNotifications(min: nil, hour: nil, weekday: weekdaysList.firstIndex(of: dataFromPickerView))
                 }
                 self.view.makeToast("Change Frequency Successfully", duration: 1.0, position: .bottom)
             case "Encouraging Quotes":
-                let tempClass = StressLevel_Notifications()
                 switch showing {
                 case 0:
-                    tempClass.sendEncouragingQuoteNotifications(min: Int(dataFromPickerView), hour: nil, weekday: nil)
+                    class_StressLevel_Notifications.sendEncouragingQuoteNotifications(min: Int(dataFromPickerView), hour: nil, weekday: nil)
                 case 1:
-                    tempClass.sendEncouragingQuoteNotifications(min: nil, hour: Int(dataFromPickerView), weekday: nil)
+                    class_StressLevel_Notifications.sendEncouragingQuoteNotifications(min: nil, hour: Int(dataFromPickerView), weekday: nil)
                 default:
-                    tempClass.sendEncouragingQuoteNotifications(min: nil, hour: nil, weekday: weekdaysList.firstIndex(of: dataFromPickerView))
+                    class_StressLevel_Notifications.sendEncouragingQuoteNotifications(min: nil, hour: nil, weekday: weekdaysList.firstIndex(of: dataFromPickerView))
                 }
                 self.view.makeToast("Change Frequency Successfully", duration: 1.0, position: .bottom)
             case "Stress Reminders":
-                let tempClass = StressLevel_Notifications()
                 stressReminder_Notifications_StressLevel = Int(dataFromPickerView)!
-                tempClass.sendStressReminderNotifications(stressLevel: stressReminder_Notifications_StressLevel)
+                class_StressLevel_Notifications.sendStressReminderNotifications(stressLevel: stressReminder_Notifications_StressLevel)
                 self.view.makeToast("Change Frequency Successfully", duration: 1.0, position: .bottom)
             default:
                 print("ERROR: Invalid Data Type")
