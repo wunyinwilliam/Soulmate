@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class A1_ActivitiesViewController: UIViewController {
     
@@ -38,6 +39,7 @@ class A1_ActivitiesViewController: UIViewController {
         title = "ACTIVITIES"
         navigationController?.title = "Activities"
         
+        self.setupLoadingIndicator()
         self.setupUserIconButton()
         self.setupUI()
         self.addGestureRecognizer()
@@ -125,8 +127,18 @@ class A1_ActivitiesViewController: UIViewController {
         if sender.state == .began || sender.state == .changed {
             sender.view?.backgroundColor = UIColor(hex: "#FFB5A7FF")
         } else if sender.state == .ended {
-            self.performSegue(withIdentifier: "A1ToA4Segue", sender: self)
-            sender.view?.backgroundColor = UIColor(hex: "#FCD5CEFF")
+            self.refreshIssueFromDatabase()
+            self.loadingIndicator.isAnimating = true
+            self.view.isUserInteractionEnabled = false
+            self.view.mask = UIView(frame: self.view.frame)
+            self.view.mask?.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                self.performSegue(withIdentifier: "A1ToA4Segue", sender: self)
+                sender.view?.backgroundColor = UIColor(hex: "#FCD5CEFF")
+                self.loadingIndicator.isAnimating = false
+                self.view.isUserInteractionEnabled = true
+                self.view.mask = nil
+            }
         }
     }
     
@@ -148,4 +160,45 @@ class A1_ActivitiesViewController: UIViewController {
         }
     }
     
+    
+    // MARK: Private Functions
+    
+    private func refreshIssueFromDatabase() {
+        let ref = Database.database().reference()
+        
+        ref.observe(.value, with: { snapshot in
+            if let nowIssue = Issue(snapshot: snapshot) {
+                print("Refresh Issue Successfully")
+                currentIssue = nowIssue
+            } else {
+                print("Refresh Issue Unsuccessfully")
+            }
+        })
+    }
+    
+    
+    // MARK: - setupLoadingIndicator
+    private func setupLoadingIndicator() {
+        overrideUserInterfaceStyle = .light
+        self.view.backgroundColor = .white
+        self.view.addSubview(loadingIndicator)
+        
+        NSLayoutConstraint.activate([
+            loadingIndicator.centerXAnchor
+                .constraint(equalTo: self.view.centerXAnchor),
+            loadingIndicator.centerYAnchor
+                .constraint(equalTo: self.view.centerYAnchor),
+            loadingIndicator.widthAnchor
+                .constraint(equalToConstant: 50),
+            loadingIndicator.heightAnchor
+                .constraint(equalTo: self.loadingIndicator.widthAnchor)
+        ])
+    }
+    
+    // MARK: - Properties
+    let loadingIndicator: ProgressView = {
+        let progress = ProgressView(colors: [.red, .green, .blue], lineWidth: 5)
+        progress.translatesAutoresizingMaskIntoConstraints = false
+        return progress
+    }()
 }

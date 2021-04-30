@@ -144,7 +144,7 @@ class A4_ExpressionsViewController: UIViewController {
         self.sentence = NSMutableAttributedString()
 
         let attributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont.systemFont(ofSize: 14),
+            .font: UIFont.systemFont(ofSize: 16),
             .backgroundColor: UIColor(hex: "#FEC89AFF")!,
         ]
             

@@ -15,6 +15,7 @@ class H1_HomeViewController: UIViewController {
     
     // MARK: - Variables
     @IBOutlet weak var stress_slideBar: UISlider!
+    @IBOutlet weak var todayQuoteLabel: UILabel!
     let quoteCard = MDCCardCollectionCell()
     let quote = quotesList.randomElement()
     let quoteLabel = UILabel()
@@ -74,7 +75,8 @@ class H1_HomeViewController: UIViewController {
         
         // Set up 'Today Quote' Card
         
-        quoteCard.frame = CGRect(x: 60.0, y: 150.0, width: self.view.frame.width - 50.0, height: 100.0)
+        print("self.todayQuoteLabel.frame: ", self.todayQuoteLabel.frame)
+        quoteCard.frame = CGRect(x: 60.0, y: self.todayQuoteLabel.frame.maxY+50.0, width: self.view.frame.width - 50.0, height: 100.0)
         quoteCard.center.x = self.view.center.x
         quoteCard.cornerRadius = 3.0
         quoteCard.applyTheme(withScheme: globalContainerScheme())

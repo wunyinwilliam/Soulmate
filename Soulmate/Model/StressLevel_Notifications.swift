@@ -64,7 +64,6 @@ class StressLevel_Notifications: UIViewController, UNUserNotificationCenterDeleg
     
     func sendEncouragingQuoteNotifications(min: Int?, hour: Int?, weekday: Int?) {
         let center = UNUserNotificationCenter.current()
-        center.delegate = self
         
         let content = UNMutableNotificationContent()
         content.title = "Encouraging Quote"

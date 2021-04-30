@@ -238,7 +238,6 @@ extension R1_RecordsViewController: CalendarViewDelegate {
 
 extension R1_RecordsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(calendarView.selectedDates)
         if calendarView.selectedDates.count != 0 {
             let selectedDate = calendarView.selectedDates[0]
             return retrivestressIndexRecord(selectedDate).count

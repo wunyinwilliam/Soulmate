@@ -32,10 +32,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("UNUserNotificationCenter: Permission denied")
             }
         }
-        print(" ******* PENDING NOTIFICATIONS *******")
         center.getPendingNotificationRequests(completionHandler: { requests in
             for request in requests {
-                print(request.identifier)
+                print("Notification: " + request.identifier)
             }
         })
     }

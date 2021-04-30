@@ -28,12 +28,12 @@ class Issue {
         guard let value = snapshot.value as? [String: AnyObject] else {
             return nil
         }
-        let positive_negative = value["positive_negative"] as? String
-        let emotions = value["emotions"] as? String
-        let stressLevel = value["stressLevel"] as? Int
-        let reasons = value["reasons"] as? String
-        let details = value["details"] as? String
-        let helps = value["helps"] as? String
+        let positive_negative = value["pos_negs"]?["pos_neg"] as? String
+        let emotions = value["emotions"]?["emotion"] as? String
+        let stressLevel = value["stressLevels"]?["stressLevel"] as? Int
+        let reasons = value["reasons"]?["reason"] as? String
+        let details = value["details"]?["detail"] as? String
+        let helps = value["helps"]?["help"] as? String
         
         self.positive_negative = positive_negative ?? "neutral"
         if emotions != nil {
